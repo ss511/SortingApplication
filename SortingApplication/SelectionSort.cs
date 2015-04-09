@@ -19,13 +19,13 @@ namespace SortingApplication
                 for (int j = i+1; j < n; j++)
                 {
                     if (arr[position] > arr[j])
-                        position = j;
-                    if(position != i)
-                    {
-                        swap = arr[i];
-                        arr[i] = arr[position];
-                        arr[position] = swap;
-                    }
+                        position = j;   
+                }
+                if (position != i)
+                {
+                    swap = arr[i];
+                    arr[i] = arr[position];
+                    arr[position] = swap;
                 }
             }
             Console.WriteLine("\nSelection Sort:");

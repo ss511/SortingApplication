@@ -16,25 +16,44 @@ namespace SortingApplication
             {
                 elements[i] = int.Parse(Console.ReadLine());
             }
+            int choice;
+            Console.WriteLine("Please Select 1-Bubble Sort 2-Selection Sort 3-Insertion Sort 4-Merge Sort 5-Quick Sort");
+            choice = int.Parse(Console.ReadLine());
+            Sort sort;
             //Bubble Sort
-            Sort sort = new BubbleSort();
-            sort.sorting(elements);
+            if (choice == 1)
+            {
+                sort = new BubbleSort();
+                sort.sorting(elements);
+            }
 
             //Selection Sort
-            sort = new SelectionSort();
-            sort.sorting(elements);
+            else if (choice == 2)
+            {
+                sort = new SelectionSort();
+                sort.sorting(elements);
+            }
 
             //Insertion Sort
-            sort = new InsertionSort();
-            sort.sorting(elements);
+            else if (choice == 3)
+            {
+                sort = new InsertionSort();
+                sort.sorting(elements);
+            }
 
             //Merge Sort
-            sort = new MergeSort();
-            sort.sorting(elements);
+            else if (choice == 4)
+            {
+                sort = new MergeSort();
+                sort.sorting(elements);
+            }
 
             //Quick Sort
-            sort = new QuickSort();
-            sort.sorting(elements);
+            else
+            {
+                sort = new QuickSort();
+                sort.sorting(elements);
+            }
 
             Console.ReadLine();
         }
